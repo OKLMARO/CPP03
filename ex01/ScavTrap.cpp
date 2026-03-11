@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 13:49:47 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/11 14:47:06 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 14:59:33 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,37 +46,20 @@ void	ScavTrap::guardGate()
 
 void	ScavTrap::beRepaired(unsigned int amount)
 {
-	// if (this->energyPoint < 1 || this->hitPoint == 0)
-	// 	return ;
-	// this->energyPoint = this->energyPoint - 1;
-	// this->hitPoint = this->hitPoint + amount;
 	ClapTrap::beRepaired(amount);
-	//std::cout << "ScavTrap " << this->name << " repaired " << amount << " points !\n";
 }
 
 void	ScavTrap::takeDamage(unsigned int amount)
 {
-	// if (amount == 0)
-	// 	return ;
-	// if (this->hitPoint < amount)
-	// 	this->hitPoint = 0;
-	// else
-	// 	this->hitPoint = this->hitPoint - amount;
-	// if (this->hitPoint == 0)
-	// {
-	// 	std::cout << "ScavTrap " << this->name << " is dead !\n";
-	// 	return ;
-	// }
 	ClapTrap::takeDamage(amount);
-	//std::cout << "ScavTrap " << this->name << " take " << amount << " points of damage !\n";
 }
 
 void	ScavTrap::attack(const std::string& target)
 {
 	if (this->energyPoint < 1 || this->hitPoint == 0)
 		return ;
-	this->energyPoint = this->energyPoint - 1;
-	std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage !\n";
+	std::cout << "ScavTrap :\n";
+	ClapTrap::attack(target);
 }
 
 ScavTrap::~ScavTrap()
