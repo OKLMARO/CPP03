@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 10:54:03 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/09 11:53:33 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 11:27:34 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap()
 {
-	this->name = "Default ClapTrap\n";
+	this->name = "Default ClapTrap";
 	this->hitPoint = 10;
 	this->energyPoint = 10;
 	this->attackDamage = 0;
@@ -33,12 +33,12 @@ ClapTrap::ClapTrap(std::string name)
 	this->hitPoint = 10;
 	this->energyPoint = 10;
 	this->attackDamage = 0;
-	std::cout << "Default constructor called !\n";
+	std::cout << "Constructor called !\n";
 }
 
 void	ClapTrap::attack(const std::string& target)
 {
-	if (this->energyPoint < 1)
+	if (this->energyPoint < 1 || this->hitPoint == 0)
 		return ;
 	this->energyPoint = this->energyPoint - 1;
 	std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage !\n";
@@ -60,16 +60,17 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->energyPoint < 1)
+	if (this->energyPoint < 1 || this->hitPoint == 0)
 		return ;
 	this->energyPoint = this->energyPoint - 1;
-	std::cout << "ClapTrap " << this->name << " repaired " << amount << " points of  !\n";
+	std::cout << "ClapTrap " << this->name << " repaired " << amount << " points !\n";
 }
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap &old)
 {
 	if (this != &old)
 	{
+		this->name = old.name;
 		this->hitPoint = old.energyPoint;
 		this->energyPoint = old.energyPoint;
 		this->attackDamage = old.attackDamage;

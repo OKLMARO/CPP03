@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 10:54:00 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/09 11:05:09 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 11:24:53 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 	void		takeDamage(unsigned int amount);
 	void		beRepaired(unsigned int amount);
 	void		attack(const std::string& target);
-	ClapTrap	&ClapTrap::operator=(const ClapTrap &old);
+	ClapTrap	&operator=(const ClapTrap &old);
 	~ClapTrap();
 };
 
