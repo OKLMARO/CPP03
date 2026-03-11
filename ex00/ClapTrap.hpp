@@ -6,14 +6,14 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 10:54:00 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/11 11:24:53 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 11:35:59 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
-#include <iostream>
+# include <iostream>
 
 class ClapTrap
 {

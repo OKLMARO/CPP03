@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 10:54:03 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/11 11:27:34 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 11:41:20 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,15 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
+	if (amount == 0)
+		return ;
 	if (this->hitPoint < amount)
 		this->hitPoint = 0;
 	else
 		this->hitPoint = this->hitPoint - amount;
 	if (this->hitPoint == 0)
 	{
-		std::cout << "ClapTrap " << this->name << " is dead !";
+		std::cout << "ClapTrap " << this->name << " is dead !\n";
 		return ;
 	}
 	std::cout << "ClapTrap " << this->name << " take " << amount << " points of damage !\n";
@@ -63,6 +65,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	if (this->energyPoint < 1 || this->hitPoint == 0)
 		return ;
 	this->energyPoint = this->energyPoint - 1;
+	this->hitPoint = this->hitPoint + amount;
 	std::cout << "ClapTrap " << this->name << " repaired " << amount << " points !\n";
 }
 
@@ -71,7 +74,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &old)
 	if (this != &old)
 	{
 		this->name = old.name;
-		this->hitPoint = old.energyPoint;
+		this->hitPoint = old.hitPoint;
 		this->energyPoint = old.energyPoint;
 		this->attackDamage = old.attackDamage;
 	}
