@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 16:51:58 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/11 16:59:07 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 17:14:12 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,21 +42,6 @@ FragTrap	&FragTrap::operator=(const FragTrap &old)
 void	FragTrap::highFivesGuys(void)
 {
 	std::cout << "High-Fives !?\n";
-}
-
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	ClapTrap::beRepaired(amount);
-}
-
-void	FragTrap::takeDamage(unsigned int amount)
-{
-	ClapTrap::takeDamage(amount);
-}
-
-void	FragTrap::attack(const std::string& target)
-{
-	ClapTrap::attack(target);
 }
 
 FragTrap::~FragTrap()
