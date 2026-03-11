@@ -6,18 +6,18 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 10:54:06 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/11 14:26:23 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 16:59:11 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-	ScavTrap	a;
-	ScavTrap	b("B");
+	FragTrap	a;
+	FragTrap	b("B");
 	ClapTrap	c(b);
-	ScavTrap	d;
+	FragTrap	d;
 	d = b;
 	b.attack("No body");
 	b.takeDamage(3);
@@ -26,7 +26,7 @@ int main()
 	b.takeDamage(100);
 	b.attack("No one");
 	b.beRepaired(5);
-	ScavTrap	e("E");
+	FragTrap	e("E");
 	e.attack("T1");
 	e.attack("T2");
 	e.attack("T3");
@@ -39,7 +39,8 @@ int main()
 	e.attack("T10");
 	e.attack("T11");
 	e.beRepaired(1);
-	ScavTrap f("Fragile");
+	FragTrap f("Fragile");
 	f.takeDamage(0);
+	f.highFivesGuys();
 	return (0);
 }

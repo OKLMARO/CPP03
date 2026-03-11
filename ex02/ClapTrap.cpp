@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 10:54:03 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/11 14:20:08 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 14:43:15 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ ClapTrap::ClapTrap()
 	this->hitPoint = 10;
 	this->energyPoint = 10;
 	this->attackDamage = 0;
-	std::cout << "Default constructor called !\n";
+	std::cout << "ClapTrap default constructor called !\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap &old)
 {
-	std::cout << "Copy constructor called !\n";
+	std::cout << "ClapTrap copy constructor called !\n";
 	*this = old;
 }
 
@@ -33,7 +33,7 @@ ClapTrap::ClapTrap(std::string name)
 	this->hitPoint = 10;
 	this->energyPoint = 10;
 	this->attackDamage = 0;
-	std::cout << "Constructor called !\n";
+	std::cout << "ClapTrap constructor called !\n";
 }
 
 void	ClapTrap::attack(const std::string& target)
@@ -78,11 +78,11 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &old)
 		this->energyPoint = old.energyPoint;
 		this->attackDamage = old.attackDamage;
 	}
-	std::cout << "Copy assignment operator called\n";
+	std::cout << "Copy assignment operator called !\n";
 	return *this;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called !\n";
+	std::cout << "ClapTrap destructor called !\n";
 }

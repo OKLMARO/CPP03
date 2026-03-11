@@ -6,17 +6,17 @@
 #    By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/09 12:26:34 by oamairi           #+#    #+#              #
-#    Updated: 2026/03/11 11:34:47 by oamairi          ###   ########.fr        #
+#    Updated: 2026/03/11 17:10:58 by oamairi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ex01
+NAME	=	ex02
 
 CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-SRCS	=	ScavTrap.cpp ClapTrap.cpp main.cpp
+SRCS	=	FragTrap.cpp ClapTrap.cpp main.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 

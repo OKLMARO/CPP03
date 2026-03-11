@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 13:49:47 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/11 15:02:54 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 15:04:27 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ScavTrap::attack(const std::string& target)
 {
 	if (this->energyPoint < 1 || this->hitPoint == 0)
 		return ;
-	std::cout << "ScavTrap :";
+	std::cout << "ScavTrap : ";
 	ClapTrap::attack(target);
 }
 
