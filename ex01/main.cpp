@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 10:54:06 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/11 14:26:23 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 14:47:55 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ int main()
 	e.beRepaired(1);
 	ScavTrap f("Fragile");
 	f.takeDamage(0);
+	f.guardGate();
 	return (0);
 }

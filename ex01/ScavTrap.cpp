@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 13:49:47 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/11 14:43:55 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 14:47:06 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ ScavTrap::ScavTrap() : ClapTrap()
 	std::cout << "ScavTrap default constructor called !\n";
 }
 
-ScavTrap::ScavTrap(const ScavTrap &old) : ClapTrap(old){};
+ScavTrap::ScavTrap(const ScavTrap &old) : ClapTrap(old)
+{
+	std::cout << "ScavTrap copy constructor called !\n";
+}
 
 ScavTrap	&ScavTrap::operator=(const ScavTrap &old)
 {
@@ -70,10 +73,9 @@ void	ScavTrap::takeDamage(unsigned int amount)
 
 void	ScavTrap::attack(const std::string& target)
 {
-	// if (this->energyPoint < 1 || this->hitPoint == 0)
-	// 	return ;
-	// this->energyPoint = this->energyPoint - 1;
-	ClapTrap::attack(target);
+	if (this->energyPoint < 1 || this->hitPoint == 0)
+		return ;
+	this->energyPoint = this->energyPoint - 1;
 	std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage !\n";
 }
 
