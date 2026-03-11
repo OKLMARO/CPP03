@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 13:45:12 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/11 16:54:04 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/11 17:21:54 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ public:
 	ScavTrap(std::string name);
 	ScavTrap(const ScavTrap &old);
 	void		guardGate();
-	void		takeDamage(unsigned int amount);
-	void		beRepaired(unsigned int amount);
 	ScavTrap	&operator=(const ScavTrap &old);
 	void		attack(const std::string& target);
 	~ScavTrap();
